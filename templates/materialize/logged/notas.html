@@ -1,0 +1,101 @@
+<div id="generalNotas">
+    {nav-user} {fab-user}
+    <!---------------------------------- Ventanas Modales ----------------------------------->
+    <!-- ventana modal agregar nota 1 typo Texto -->
+    <div id="modal1" class="modal col l4 offset-l2">
+        <form>
+            <!-- acciones --->
+            <input type="hidden" name="ruta" value="notas">
+            <input type="hidden" name="accion" value="insertNotaTexto">
+            <!-- falta ponerle la accion-->
+            <div class="modal-content">
+                <h4>Agrega tu nota</h4>
+                <div class="input-field col s6">
+                    <input name="titulo" id="titulo" type="text" class="validate">
+                    <label for="first_name">Titulo</label>
+                </div>
+                <div class="input-field col s12">
+                    <textarea name="texto" id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Contenido</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
+                <input type="submit" class="waves-effect waves-green btn-flat" value="Agrear">
+            </div>
+        </form>
+    </div>
+    <!----------------------- ventana modal agregar nota 2 tipo Imagen ----------------------->
+    <div id="modal2" class="modal col l4 offset-l2">
+        <!-- para poder subir archivos usamos el enctype -->
+        <form method='post' enctype="multipart/form-data">
+            <!-- acciones --->
+            <input type="hidden" name="ruta" value="notas">
+            <input type="hidden" name="accion" value="insertNotaMultimedia">
+            <div class="modal-content">
+                <h4>Agrega tu nota con imagen</h4>
+                <div class="input-field col s6">
+                    <input name="titulo" id="titulo" type="text" class="validate">
+                    <label for="first_name">Titulo</label>
+                </div>
+                <div class="input-field col s12">
+                    <textarea name="texto" id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Contenido</label>
+                </div>
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Imagen</span>
+                        <input type="file" name="imagen" id="imagen">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="356000" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
+                <input type="submit" class="waves-effect waves-green btn-flat" value="Agrear">
+            </div>
+        </form>
+    </div>
+    <!---------------------- Ventana modal agregar nota 3 tipo Videos ------------------------->
+    <div id="modal3" class="modal col l4 offset-l2">
+        <!-- para poder subir archivos usamos el enctype -->
+        <form action='./' method="post" enctype="multipart/form-data">
+            <!-- acciones --->
+            <input type="hidden" name="ruta" value="notas">
+            <input type="hidden" name="accion" value="insertNotaVideo">
+            <!-- falta ponerle la accion-->
+            <div class="modal-content">
+                <h4>Agrega tu nota con Video</h4>
+                <div class="input-field col s6">
+                    <input name="titulo" id="titulo" type="text" class="validate">
+                    <label for="first_name">Titulo</label>
+                </div>
+                <div class="input-field col s12">
+                    <textarea name="texto" id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Contenido</label>
+                </div>
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Video</span>
+                        <input type="file" name="video" id="video">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="356000" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
+                <input type="submit" class="waves-effect waves-green btn-flat" value="Agrear">
+            </div>
+        </form>
+    </div>
+    <!-------------------------------------------->
+
+    
+</div>
+<!-- div General -->

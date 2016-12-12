@@ -1,0 +1,35 @@
+<tr>
+  <td title="Id" id="idUser">{id}</td>
+  <td title="Nombre" id="nombre">{nombre}</td>
+  <td title="Email" class="email">{email}</td>
+  <td title="Total Notas">{totalNotas}</td>
+  <td>
+
+    <div class="switch">
+      <label>
+      Off
+      <!-- para activarlo  hay qye porner checked desdespues del type -->
+      <input title="Estado del Usuario" class="activarUsuario" name="estado" type="checkbox" {estado}>
+      
+    
+      <span class="lever"></span>
+      On
+    </label>
+    </div>
+
+  </td>
+  <td><a class="waves-effect waves-light btn" href="#modal1" title="borrar"><i class="Tiny material-icons">delete</i></a></td>
+</tr>
+<!-- <a  href="index.php?ruta=usuario&accion=eliminarusuario&idUsuario={id}" title="borrar"> -->
+<!------------ventana de confirmacion para eliminar usuarios-------------------------------->
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Eliminar Usuario</h4>
+    <p>¿Esta usted seguro de querer borrar al ususario {email}?</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancelar</a>
+    <a href="index.php?ruta=usuario&accion=eliminarusuario&idUsuario={id}" class=" modal-action modal-close waves-effect waves-green btn-flat">Eliminar</a>
+  </div>
+</div>

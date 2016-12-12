@@ -1,0 +1,66 @@
+<form method='post' enctype="multipart/form-data" class="col s12 m3 l3">
+    <input type="hidden" name="ruta" value="notas">
+    <input type="hidden" name="accion" value="modificarNotaImagen">
+    <input type="hidden" id="idTipoNota" name="idTipoNota" value="{idtiponota}">
+    <div class="card blue-grey darken-1" id="{idcolor}">
+        <div class="card-image">
+            {url}
+        </div>
+        <div class="card-content white-text">
+            <input class="card-title contenido" id="titulo" type="text" name="titulo" value="{titulo}" />
+            <!--<input class="card-title contenido" id="texto" type="text"  name="texto" value="{texto}"/>-->
+            <textarea id="texto" class="materialize-textarea" type="text" name="texto">{texto}</textarea>
+        </div>
+        <div class="file-field input-field">
+            <div class="btn blue darken-4">
+                <span>Archivo</span>
+                <input type="file" name="foto" id="foto">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+                <input type="hidden" name="MAX_FILE_SIZE" value="356000" />
+            </div>
+        </div>
+        <div class="card-action right-align">
+            <input type="submit" class="waves-effect waves-green btn-flat " value="edit" />
+            <a href="#modal{idtiponota}" title="colores"><i class="Tiny material-icons">invert_colors</i></a>
+            <a href="index.php?ruta=notas&accion=eliminarnota&idTipoNota={idtiponota}" title="borrar"><i class="Tiny material-icons">delete</i></a>
+        </div>
+    </div>
+</form>
+
+
+
+
+    <div id="modal{idtiponota}" class="modal col l8">
+        <form id="formColor">
+            <!-- acciones --->
+            <input type="hidden" name="ruta" value="notas">
+            <input type="hidden" name="accion" value="updateColor">
+            <input type="hidden" name="idcolor" id="color" value="1">
+            <input type="hidden" id="idTipoNota" name="idTipoNota" value="{idtiponota}">
+            <div class="modal-content">
+                <p>
+                    <input class="with-gap" name="group{idtiponota}" type="radio" id="1" />
+                    <label for="1">Red</label>
+                </p>
+
+                <p>
+                    <input class="with-gap" name="group{idtiponota}" type="radio" id="2" />
+                    <label for="2">Yellow</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="group{idtiponota}" type="radio" id="3" />
+                    <label for="3">Green</label>
+                </p>
+                <p>
+                    <input class="with-gap" name="group{idtiponota}" type="radio" id="4" />
+                    <label for="4">Blue</label>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
+                <input type="submit" class="waves-effect waves-green btn-flat" id="bt-color" value="Agrear">
+            </div>
+        </form>
+    </div>

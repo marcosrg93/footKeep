@@ -1,0 +1,60 @@
+.general {
+    background-image: url('../img/backlogin2.gif');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 64.9em;
+}
+
+.margen-top {
+    width: 100%;
+    height: 10em;
+}
+
+.card{
+    max-height:490px;
+}
+
+.card-text{
+   height: 70.6667px;
+}
+.card .card-image img {
+     height: 132px;
+     margin:0 auto;
+}
+
+video.responsive-video {
+    height: 126px;
+    width: 100%;
+}
+
+.white-crema {
+    background-color: #f2f2f0 !important;
+}
+
+
+/*estilos boton login inicio*/
+
+.btMarg {
+    width: 95%;
+    margin-left: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+/* estilos ventanas modales */
+
+.modelMarg {
+    margin-left: 17%!important;
+    margin-top: 10%;
+}
+
+
+/* Esilos Admin */
+
+#searchTerm {
+    color: rgba(0, 0, 0, 0.87);
+    width: 80%;
+    margin: 2em;
+}

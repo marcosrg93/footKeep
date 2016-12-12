@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="{plantilla}/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="{plantilla}/csspropio/style.css" media="screen,projection" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="google-site-verification" content="2zjLawsqSRGhDVXyYMMA1s-yoXsn-fSVG-fX7VOdKqk" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="{plantilla}/img/favicon-32x32.png" sizes="32x32">
+  <title>{titulo}</title>
+</head>
+
+<body>
+
+  <!------------------------------------------------------- Menu de navegación lateral(Responsive) -------------------------------------------------------------------->
+  <nav>
+    <div class="nav-wrapper">
+      <ul id="slide-out" class="side-nav fixed">
+        <li>
+          <div class="userView">
+            <div class="background">
+              <img src="{plantilla}/img/backlogin2.gif">
+            </div>
+            <img class="circle" src="{plantilla}/img/admin.png">
+            <span class="white-text name">{usuario-nombre}</span>
+            <span class="white-text email">{usuario-email}</span>
+          </div>
+        </li>
+        <li>
+          <form>
+            <input id="searchTerm" type="text" onkeyup="doSearch()" placeholder="Buscar Usuario" />
+          </form>
+        </li>
+        <li><a href="https://keep-marcosrg.c9users.io/index.php?ruta=admin&accion=verusuarios">Lista de Usuarios<i class="material-icons">supervisor_account</i></a></li>
+        <li><a href="#modal8" title="Agregar Nuevo Administrador">Nuevo Administrador<i class="material-icons" >playlist_add</i></a></li>
+        <li><a href="#modal7">Editar Perfil<i class="material-icons">perm_identity</i></a></li>
+        <li><a href="#modal6" title="Cerrar Sesion">Cerrar Sesion<i class="material-icons" >power_settings_new</i></a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <!------------------------------------------------------- Muestra la tabla de Usuarios ------------------------------------------------------------------------------>
+  <div class="row">
+    <div class="col s12 m8 push-m3">
+      <h1 class="center-align">Lista de Usuarios Registrados</h1>
+      <div class="section">
+        {contenido}
+      </div>
+    </div>
+  </div>
+
+  <!--------------------------------------------------------- Ventana Modal que cierra la sesisón ---------------------------------------------------------------------->
+  <div class="row">
+    <div id="modal6" class="modal col s3 offset-s4">
+      <form>
+        <!-- acciones --->
+        <input type="hidden" name="ruta" value="usuario">
+        <input type="hidden" name="accion" value="cerrarCession">
+        <!-- falta ponerle la accion-->
+        <div class="modal-content">
+          <h4>¿Estas seguro de querer cerrar la sesion</h4>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Salir</a>
+          <input type="submit" class="waves-effect waves-green btn-flat" value="Cerrar Sesion">
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--------------------------------------------------------- ventana Modal para el edit del admin------------------------------------------------>
+  <div id="modal7" class="modal col l4 offset-l2">
+    <form>
+      <!-- acciones --->
+      <input type="hidden" name="ruta" value="usuario">
+      <input type="hidden" name="accion" value="editaradmin">
+      <div class="modal-content">
+        <h4>Registro</h4>
+        <div class="input-field">
+          <i class="material-icons prefix">account_circle</i>
+          <input required id="nombre" type="text" name="nombre" class="validate" value="{usuario-nombre}">
+          <label for="nombre">Nombre</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">email</i>
+          <input required id="email2" type="email" name="email" class="validate" value="{usuario-email}">
+          <label for="email2">Correo electrónico</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <input required id="passwordActual" type="password" name="passwordActual" class="validate">
+          <label for="password3">Clave actual</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <input required id="passwordNueva" type="password" name="passwordNueva" class="validate">
+          <label for="password3">Clave de acceso nueva</label>
+          <span class="ayuda"></span>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <input required id="passwordNuevaCopia" type="password" name="passwordNuevaCopia" class="validate">
+          <label for="password4">Repite la clave de acceso nueva</label>
+          <span class="ayuda"></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
+        <input type="submit" class="waves-effect waves-green btn-flat" value="Editar">
+      </div>
+    </form>
+  </div>
+  <!--------------------------ventana modal para agregar nuevos administradores-------------------------------------------------------------------->
+  <div id="modal8" class="modal col l4 offset-l2">
+    <form>
+      <!-- acciones --->
+      <input type="hidden" name="ruta" value="usuario">
+      <input type="hidden" name="accion" value="insertaradmin">
+      <div class="modal-content">
+        <h4>Registro de nuevo Administrador</h4>
+        <div class="input-field">
+          <i class="material-icons prefix">account_circle</i>
+          <input required id="nombre" type="text" name="nombre" class="validate">
+          <label for="nombre">Nombre</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">email</i>
+          <input required id="email2" type="email" name="email" class="validate">
+          <label for="email2">Correo electrónico</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <input required id="password" type="password" name="password" class="validate">
+          <label for="password3">Clave</label>
+          <span class="ayuda"></span>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <input required id="password2" type="password" name="password2" class="validate">
+          <label for="password3">Repite Clave de acceso </label>
+          <span class="ayuda"></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
+        <input type="submit" class="waves-effect waves-green btn-flat" value="Editar">
+      </div>
+    </form>
+  </div>
+  <!----------------------------------------------------------------------- Imports de Js ---------------------------------------------------------------------------->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{plantilla}/js/materialize.min.js"></script>
+  <script src="{plantilla}/js/init.js"></script>
+  <!--Import Jquery editable para modificar los campos -->
+  <script src="{plantilla}/js/jquery.editable.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+Cambios Realizados a tener en cuenta
+
+-Instalacion de PhpmyAdmin -- Listo
+-Creación de la BD -- Listo
+-Formulario de registro con email de activacion(Con claves cifradas) -- Listo
+-Temporalida del email de activacion
+-Login con claves cifradas
+-Landing Page Con estilos propios(Hacer mockup)

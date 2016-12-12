@@ -1,0 +1,3 @@
+[23-Nov-2016 10:51:58 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/clases/prueba.php on line 6
+[23-Nov-2016 10:51:58 UTC] PHP Stack trace:
+[23-Nov-2016 10:51:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/clases/prueba.php:0

@@ -1,0 +1,28 @@
+
+Fuente: https://community.c9.io/t/setting-up-phpmyadmin/1723
+
+1- Instalación de PhpmyAdmin
+
+    -Instalar mysql
+      mysql-ctl install
+    -Instalar phpmyAdmin
+        phpmyadmin-ctl install
+        
+        PHPMyAdmin Installation complete. 
+        You can log in at: https://proyectonotas-marcosrg.c9users.io/phpmyadmin    https://keep-marcosrg.c9users.io/phpmyadmin
+        with the following username (and blank password):
+
+        Username: marcosrg
+        
+2- Arrancar PhpmyAdmin
+
+    -En el bash introducir comando 
+     mysql-ctl start
+
+3- correo electronico
+  footkeepfree@gmail.com
+  footkeep1 -contraseña
+  
+4- Tabla usuarios modificada para tener el email a unique
+   ya solo puede estar el email 1 sola vez en la bd
+  

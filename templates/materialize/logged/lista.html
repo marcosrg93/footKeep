@@ -1,0 +1,128 @@
+<div class="row">
+  <div class="col s12 m3">
+    <!-- barra de navegacion lateral -->
+
+    <ul id="slide-out" class="side-nav fixed">
+      <li>
+        <div class="userView">
+          <div class="background">
+            <img src="{plantilla}/img/backlogin2.gif">
+          </div>
+          <img class="circle" src="{plantilla}/img/admin.png">
+          <span class="white-text name">{usuario-nombre}</span>
+          <span class="white-text email">{usuario-email}</span>
+          <span class="white-text hora">{hora}</span>
+        </div>
+      </li>
+      <li><a href="https://keep-marcosrg.c9users.io/index.php?ruta=notas&accion=refrescarNota">Mis Notas<i class="material-icons">supervisor_account</i></a></li>
+      <li><a href="#modal16">Editar Perfil<i class="material-icons">perm_identity</i></a></li>
+      <li><a href="#modal6" title="Cerrar Sesion">Cerrar Sesion<i class="material-icons" >power_settings_new</i></a></li>
+    </ul>
+  </div>
+  <div class="col s12 m9">
+    {lista-nota}
+  </div>
+</div>
+
+
+<!---------------------------------------- Ventanas Modales ------------------------------->
+<!-- Modal Editar usuario -->
+<div id="modal16" class="modal col l4 offset-l2">
+  <form method="post">
+    <!-- acciones --->
+    <input type="hidden" name="ruta" value="usuario">
+    <input type="hidden" name="accion" value="editarusuariodatos">
+    <!-- falta ponerle la accion-->
+    <div class="modal-content">
+      <h4>Mi Perfil</h4>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input name="nombre" id="nombre" type="text" class="validate" value="{usuario-nombre}">
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">email</i>
+        <input name="email" id="email" type="text" class="validate" value="{usuario-email}">
+      </div>
+      <p>Cambiar Contraseña</p>
+      <div class="input-field">
+        <i class="material-icons prefix">lock</i>
+        <input required id="passwordActual" type="password" name="passwordActual" class="validate">
+        <label for="password3">Introduce tu clave actual</label>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">lock</i>
+        <input required id="passwordNueva" type="password" name="passwordNueva" class="validate">
+        <label for="password4">Nueva Clave</label>
+          <span class="ayuda"></span>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">lock</i>
+        <input required id="passwordNuevaCopia" type="password" name="passwordNuevaCopia" class="validate">
+        <label for="password5">Repite la nueva Clave</label>
+          <span class="ayuda"></span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
+      <input type="submit" class="waves-effect waves-green btn-flat" value="Actualizar">
+    </div>
+  </form>
+</div>
+<!-- Modal error -->
+<div id="modal145" class="modal col l4 offset-l2">
+  <form>
+    <!-- acciones --->
+    <input type="hidden" name="ruta" value="usuario">
+    <input type="hidden" name="accion" value="">
+    <!-- falta ponerle la accion-->
+    <div class="modal-content">
+      <h4>Mi Perfil</h4>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input name="nombre" id="nombre" type="text" class="validate" value="{usuario-nombre}">
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">email</i>
+        <input name="email" id="email" type="text" class="validate" value="{usuario-email}">
+      </div>
+      <p>Cambiar Contraseña</p>
+      <div class="input-field">
+        <i class="material-icons prefix">lock</i>
+        <input required id="passwordActual" type="password" name="passwordActual" class="validate">
+        <label for="password3">Introduce tu clave actual</label>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">lock</i>
+        <input required id="passwordNueva" type="password" name="passwordNueva" class="validate">
+        <label for="password4">Nueva Clave</label>
+          <span class="ayuda"></span>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">lock</i>
+        <input required id="passwordNuevaCopia" type="password" name="passwordNuevaCopia" class="validate">
+        <label for="password5">Repite la nueva Clave</label>
+          <span class="ayuda"></span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
+      <input type="submit" class="waves-effect waves-green btn-flat" value="Actualizar">
+    </div>
+  </form>
+</div>
+<!--------------------------------------------Cerrar SESION---------------------------------------------------------------------------------------->
+<div id="modal6" class="modal col s3 offset-s4">
+  <form>
+    <!-- acciones --->
+    <input type="hidden" name="ruta" value="usuario">
+    <input type="hidden" name="accion" value="cerrarCession">
+    <!-- falta ponerle la accion-->
+    <div class="modal-content">
+      <h4>¿Estas seguro de querer cerrar la sesion</h4>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Salir</a>
+      <input type="submit" class="waves-effect waves-green btn-flat" value="Cerrar Sesion">
+    </div>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+-usuario                                    -nota
+
+idUsuario   integer primary key not null
+Email                                       idNota
+password                                    idTipoNota
+F.alta                                      idUsuario
+Estado                                      idColor
+Nombre
+Tipo(admin,user)
+
+
+-color                                      -tipoNota
+
+idColor                                     idTipoNota
+Color                                       Tipo(Texto, imagen, video,....)
+Descripcion                                 url
+                                            texto
+
+
